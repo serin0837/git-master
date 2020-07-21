@@ -1,0 +1,131 @@
+# git-master
+
+## maniging timeline
+
+Basic timeline requirements
+Store content of file and directories
+Add new "points" to the timeline
+View the changes we've made since the last point in our time line
+Move between between the points in the timeline
+
+git is version control software and some of its most basic features will allow us to fulfill all the requirements of a basic content timeline.
+
+## 1. version control?
+
+-control version
+-version control system is software that helps you control (or manage) the different version.
+-there is a lot of version control
+
+- ex) git, subversion, mercurial
+- centralized model/ distributed model
+  the main point of a version control system is
+  to help you maintain a detailed history of the project
+  as well as the ability to work on different versions of it. Having a detailed history of a project is important because it lets you see the progress of the project over time. If needed, you can also jump back to any point in the project to recover data or files.
+
+## 2. daily use of version control
+
+-undo is kind of version control
+-google docs -> revision history ->check status(revision) version = revision // restore this version can make you start with old version
+
+- google docs
+  But for all its ability, it's not as powerful as we'd like. What's it missing? A few that I can think of are:
+
+the ability to label a change
+the ability to give a detailed explanation of why a change was made
+the ability to move between different versions of the same document
+the ability to undo change A, make edit B, then get back change A without affecting edit B
+
+- version contol toll , git , can do all of those things. and more
+
+## git and version contrrol
+
+<terminology> 
+-version control system(VCS) === source code manager(SCM)
+  
+-commit (현상태 캡쳐): Git thinks of its data like a set of snapshots of a mini filesystem
+ Every time you commit (save the state of your project in Git), it basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. You can think of it as a save point in a game - it saves your project's files and any information about them.
+Everything you do in Git is to help you make commits, so a commit is the fundamental unit in Git.
+
+- repository/ repo
+  a directory which contains your project work, as well as a few files
+  Repositories can exist either locally on your computer or as a remote copy on another computer. A repository is made up of commits.
+
+- working directory
+  👩The working directory refers to all of the files and directories we can currently view and edit in our project.
+
+  the files that you see in your computer's file system.
+  When you open your project files up on a code editor, you're working with files in the Working Directory.
+
+This is in contrast to the files that have been saved (in commits!) in the repository.
+
+When working with Git, the Working Directory is also different from the command line's concept of the current working directory which is the directory that your shell is "looking at" right now. (?)
+
+-checkout
+A checkout is when content in the repository has been copied to the Working Directory. (?)
+
+- Staging Area / Staging Index / Index
+  A file in the Git directory that stores information about what will go into your next commit. You can think of the staging area as a prep table where Git will take the next commit. Files on the Staging Index are poised to be added to the repository.
+
+- SHA [샤]
+  A SHA is basically an ID number for each commit
+  It is a 40-character string composed of characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git. "SHA" is shorthand for "Secure Hash Algorithm"
+
+- branch
+  A branch is when a new line of development is created that diverges from the main line of development. This alternative line of development can continue without altering the main line.
+
+you can think of a branch as where you make a save point in your game and then decide to try out a risky move in the game. If the risky move doesn't pan out, then you can just go back to the save point. The key thing that makes branches incredibly powerful is that you can make save points on one branch, and then switch to a different branch and make save points there, too.
+
+working directory ->staging index -> commit -> repository
+
+## command
+
+git init
+create a new git repository
+
+ls -a
+we can print all the files and directories including those directories that start with a .
+
+git will register that the working directory has been updated and we can view this information by running the git status command
+(An untracked file is a newly created file that has not yet been stored inside the git repository.)
+
+The staging area is an area inside git where we store all the changes that we want stored in our next snapshot.
+
+We can use the git add command in order to stage these changes.
+
+Working directory:
+Staging area:
+Git repository:
+
+It is our goal ultimately to store a snapshot of our file and directories so we can start to create a timeline consisting of snapshots of our project.
+git commit -m <commit-message-here>.
+
+first commit is root commit
+
+git log
+We can use the command git log to list all the commits stored inside a git repository. You can also think of git log as printing the timeline of different commits in our project.
+
+# Branches and Github
+
+A branch in git is often referred to as a series of commits that forms a timeline representing some work in a project.
+
+However, we need only point a single commit as this one points back the others.
+
+The branch that is created by default when a new empty git repository is created is the master branch. Whenever a new git commit is created then master branch is updatd so it points to the most recent commit.
+
+## Github?
+
+Github is a website that stores github repositories in the cloud and allows multiple users to store their work so that each collaborator can share their changes online.
+
+## remote
+
+A remote repository is one stored on github
+
+- a new github repository will be referred to as origin.
+
+## git remote add origin <origin-repository-url>
+
+When a new repository is created on github then a new url is generated which points to the remote repository on github. We can use this url to connect a local machine with a github repo so work can be retrieved from the remote and so the remote can be updated with any local commits.
+Once this command has been executed this can be checked by running
+(👩그냥 바로 클론 하면 안되나요?)
+
+## git remote -v
