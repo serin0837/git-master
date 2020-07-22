@@ -109,6 +109,8 @@ also go to home directory
 
 ### touch (make file)
 
+### rm (remove files and directories)
+
 #### unix style code
 
 https://www.udacity.com/wiki/ud775/command-line-instructions
