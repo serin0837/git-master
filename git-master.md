@@ -77,6 +77,63 @@ you can think of a branch as where you make a save point in your game and then d
 
 working directory ->staging index -> commit -> repository
 
+## Git config
+
+### git config --list(show me the configure list )
+
+# 2. create a git repo
+
+## git init
+
+.git is repository
+hidden directory
+
+what is inside .git?
+config file, hooks directory...
+
+## clone and existing repo
+
+git clone <url>
+Verify Terminal Location
+
+TIP: Now before you clone anything, make sure you are located in the correct directory on the command line. Cloning a project creates a new directory and places the cloned Git repository in it. The problem is that you can't have nested Git repositories. So make sure the terminal's current working directory isn't located in a Git repository. If your current working directory is not in your shell's prompt, type pwd to print the working directory.
+(👩what is this means?)
+
+Cloning into 'course-git-blog-project'...". Git is creating a directory (with the same name of the project we're cloning) and putting the repository in it
+
+The rest of the output is basically validation - it's counting the remote repository's number of objects, then it compresses and receives them, then it unpacks them.
+
+### clone with different name?
+
+add another name after same command
+
+Not In A Git Repository?
+WARNING: Here's a very important step that often gets missed when you first start working with Git. When the git clone command is used to clone a repository, it creates a new directory for the repository...you already know this. But, it doesn't change your shell's working directory. It created the new repo inside the current working directory, which means that the current working directory is still outside of this new Git repo! Make sure you cd into the new repository.
+
+Remember to use the Terminal's command prompt as an aid - if you're in a directory that is a Git repository, the command prompt will include a name in parentheses.
+
+## Determine a repo's status
+
+The output tells us two things:
+
+On branch master – this tells us that Git is on the master branch. You've got a description of a branch on your terms sheet so this is the "master" branch (which is the default branch). We'll be looking more at branches in lesson 5
+Your branch is up-to-date with 'origin/master'. – Because git clone was used to copy this repository from another computer, this is telling us if our project is in sync with the one we copied from. We won't be dealing with the project on the other computer, so this line can be ignored.
+nothing to commit, working directory clean – this is saying that there are no pending changes.
+
+This command will:
+
+tell us about new files that have been created in the Working Directory that Git hasn't started tracking, yet
+files that Git is tracking that have been modified
+a whole bunch of other things that we'll be learning about throughout the rest of the course ;-)
+
+---
+
+# Create A GIt Repo
+
+1. `mkdir -p udacity-git-course/new-git-project && cd $_`
+   I made file path and cd to there
+2. git init
+
 ## command
 
 git init
@@ -106,11 +163,15 @@ We can use the command git log to list all the commits stored inside a git repos
 
 # Branches and Github
 
+## master branch
+
+(👩default new empty git repository)
 A branch in git is often referred to as a series of commits that forms a timeline representing some work in a project.
 
 However, we need only point a single commit as this one points back the others.
 
-The branch that is created by default when a new empty git repository is created is the master branch. Whenever a new git commit is created then master branch is updatd so it points to the most recent commit.
+The branch that is created by default when a new empty git repository is created is the master branch.
+Whenever a new git commit is created then master branch is updatd so it points to the most recent commit.
 
 ## Github?
 
@@ -129,3 +190,20 @@ Once this command has been executed this can be checked by running
 (👩그냥 바로 클론 하면 안되나요?)
 
 ## git remote -v
+
+## git push
+
+git push will add the three local commits on to the master branch of the origin repository.
+We can use the git push command in the following way:
+git push origin master
+
+Once this command is executed both the local master branch and the origin master branch abbreviated as origin/master will be pointing at the same commit. In this commit, both the local and the remote master branches are up to-date.
+
+## example of command connecting to different repository
+
+1. git remote -v (check now)
+2. git remote remove origin
+3. git remote -v (double check that it's removed, see nothing)
+4. git remote add origin <URL>
+5. git remote -v
+6. git push origin master

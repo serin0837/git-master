@@ -101,8 +101,14 @@ which folders and directories are currently inside of the current directory.
 
 also go to home directory
 
+### start . (open directory)
+
 ### mkdir (make directory)
 
 ### rmdir (delete directory)
 
 ### touch (make file)
+
+#### unix style code
+
+https://www.udacity.com/wiki/ud775/command-line-instructions
