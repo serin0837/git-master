@@ -256,3 +256,6 @@ git-merge manual page
 
 git- merge --help(all of documentation)
 small
+
+> guide-to-git-demonstration
+> Guide-to-Git
