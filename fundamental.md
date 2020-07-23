@@ -2,42 +2,35 @@
 
 ## computer?
 
-1930s has taken off
-machines that can perform calculations and operations on data.
-
-hardware : physical stuff like keyboard
-
-software: systems take input and give you output
-(not physical stuff)
-the set of instructions written to be processed(01001 stuff) and executed by the hardware that makes up a computer
+- 1930s has taken off
+  machines that can perform calculations and operations on data.
+- hardware : physical stuff like keyboard
+- software: systems take input and give you output
+  (not physical stuff)
+  the set of instructions written to be processed(01001 stuff) and executed by the hardware that makes up a computer
 
 ---
 
 ## operating systems
 
-`programs that manage with the different software`
+> programs that manage with the different software
 
-mordern computers often have to run several applications at the same time.
+- modern computers often have to run several applications at the same time.
+- each applications are made up of software
+- software will require access to the physical resources of the computer in order to run.
+- Operating systems are essentially master programs that manage and co-ordinate the different software and how they get access to the physical hardware of a computer.
 
-each applications are made up of software
+1. unix
 
-software will require access to the physical resources of the computer in order to run.
+- unix is first operating system in 1960
+- many operating systems today are said to be unix-lie system
+  ex) Mac OS
+  ex) Linux (1990s)
 
-Operating systems are essentially master programs that manage and co-ordinate the different software and how they get access to the physical hardware of a computer.
+2. DOS
 
-### unix
-
-unix is first operating system in 1960
-
-many operating systems today are said to be unix-lie system
-ex) Mac OS
-ex) Linux (1990s)
-
-### DOS
-
-Windows operating system emerged from the MS-DOS (MicroSoft Disk Operating System).
-
-The main difference between MS-DOS and Unix is that MS-DOS was designed for a single user.
+- Windows operating system emerged from the MS-DOS (MicroSoft Disk Operating System).
+- The main difference between MS-DOS and Unix is that MS-DOS was designed for a single user.
 
 ---
 
@@ -51,9 +44,9 @@ refer this set of instruction that a computer executes as a computer program
 
 users can issue commands to the computer.
 
-terminal is a computer interface that is used for entering text command
+> terminal is a computer interface that is used for entering text command
 
-\*A **console** is a set of tools that are used to operate a machine. In the context of computers, a **console** comprises all the tools used to operate a machine, such as the **terminal** and the keyboard you use in order to type commands into the **terminal**. However, sometimes the terms **console** and **terminal** are used interchangeably.
+A **console** is a set of tools that are used to operate a machine. In the context of computers, a **console** comprises all the tools used to operate a machine, such as the **terminal** and the keyboard you use in order to type commands into the **terminal**. However, sometimes the terms **console** and **terminal** are used interchangeably.
 
 ---
 
@@ -61,15 +54,13 @@ terminal is a computer interface that is used for entering text command
 
 A terminal allows users to input commands but this application doesn't know what to do with the command itself.
 
-A shell is a program that interprets commands and executes a program that will carry out the task.
+> A shell is a program that interprets commands and executes a program that will carry out the task.
 
 A shell is a **command line interpreter**
 
-### Bash
+## Bash
 
-Bash is both a **command line interpreter** and a **programming language**.
-
-ex)
+> Bash is both a **command line interpreter** and a **programming language**.
 
 ### `echo` command
 
@@ -82,8 +73,9 @@ We can start to enter commmands into the **terminal** and bash will interpret an
 Collections of data are organised into groups called `files`
 
 A **directory** is a container for multiple files and directories.
-`directory is folder`
-data-> file ->directory ->directory
+
+> directory is folder!
+> data-> file ->directory ->directory
 
 ### Nagivating the file system
 

@@ -1,5 +1,3 @@
-# git-master
-
 ## maniging timeline
 
 Basic timeline requirements
@@ -10,7 +8,7 @@ Move between between the points in the timeline
 
 git is version control software and some of its most basic features will allow us to fulfill all the requirements of a basic content timeline.
 
-## 1. version control?
+# 1. version control?
 
 -control version
 -version control system is software that helps you control (or manage) the different version.
@@ -22,7 +20,7 @@ git is version control software and some of its most basic features will allow u
   to help you maintain a detailed history of the project
   as well as the ability to work on different versions of it. Having a detailed history of a project is important because it lets you see the progress of the project over time. If needed, you can also jump back to any point in the project to recover data or files.
 
-## 2. daily use of version control
+## daily use of version control
 
 -undo is kind of version control
 -google docs -> revision history ->check status(revision) version = revision // restore this version can make you start with old version
@@ -37,7 +35,7 @@ the ability to undo change A, make edit B, then get back change A without affect
 
 - version contol toll , git , can do all of those things. and more
 
-## git and version contrrol
+## git and version control
 
 <terminology> 
 -version control system(VCS) === source code manager(SCM)
@@ -207,3 +205,77 @@ Once this command is executed both the local master branch and the origin master
 4. git remote add origin <URL>
 5. git remote -v
 6. git push origin master
+
+# 3. Review repo history
+
+## intro
+
+- git log
+- git show : displays information about the given commit
+
+## displaying a repository's commit
+
+- git log ->
+
+1. to scroll down, press
+
+- j or ↓ to move down one line at a time
+- d to move by half the page screen
+- f to move by a whole page screen
+
+2. to scroll up, press
+
+- k or ↑ to move _up_ one line at a time
+- u to move by half the page screen
+- b to move by a whole page screen
+
+  can keep see all the log
+
+  > if want to be out of log press `Q`
+
+## changing how git log displays info
+
+`git log --oneline`
+one line changed how it displays
+:6 first sha and commit message
+
+## viewing modified files
+
+`git log --stat`(stat:statistics)
+
+- displays the files that have been changed
+- display the numbers of lines that have been added/removed
+- displays a summary line
+
+## viewing file changes
+
+`git log -p`(--patch)
+
+- displays the files that have been modified
+- displays the location of the lines that have been added/removed
+- displays the actual changes that have been made
+
+diff === patch
+show original version and changed version
+show different changes in same file
+index hash original ver / hash changed ver <- not really useful
+@@ start line, original how many line/ start line, how many changed line
+bottom is actual code that changed
+-: removed
++: added
+
+`git log -p --stat` show both
+`git log --stat -p` show both
+
+`git log -p -w` will show the patch information, but will not highlight lines where only whitespace changes have occurred.
+
+## viewing a specific commit
+
+example :`git log -p fdf5493`
+provide specific SHA
+`git show`
+most recent commit
+
+displayed exactly same info with `git log -p` command
+
+`git show` can be combied with most of other flags
