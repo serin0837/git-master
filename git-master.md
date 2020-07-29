@@ -85,7 +85,7 @@ working directory ->staging index -> commit -> repository
 
 .git is repository
 hidden directory
-`rm -rf .git`
+
 what is inside .git?
 config file, hooks directory...
 
@@ -132,6 +132,7 @@ a whole bunch of other things that we'll be learning about throughout the rest o
    I made file path and cd to there
 2. git init
 
+(delete git : `rm -rf .git`)
 ## command
 
 git init
