@@ -85,7 +85,7 @@ working directory ->staging index -> commit -> repository
 
 .git is repository
 hidden directory
-
+`rm -rf .git`
 what is inside .git?
 config file, hooks directory...
 
